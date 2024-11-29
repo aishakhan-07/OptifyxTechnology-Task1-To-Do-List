@@ -1,58 +1,94 @@
-body{
+/* General Reset */
+body, h1, ul, li, input, button {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(230,230,230);
-}
-.container{
-    border: none;
-    border-radius: 15px;
-    background-color: rgb(156,222,252);
-    height: auto;
-    width: 25vw;
-    box-shadow: 4px 5px 6px;
-
-}
-.header{
+    margin: 0;
+  }
+  
+  .app {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
     text-align: center;
-    padding: 10px;
-    font-size: 1.7em;
-    font-weight: 900;
-    border-bottom: 0.5px solid white;
-    margin-bottom: 20px;
-
-}
-.addTask{
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .todo-input {
     display: flex;
-    justify-content: space-evenly;
-}
-input{
-    padding: 7px;
-    border-radius: 5px;
-
-}
-button:hover{
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px;
-}
-button{
-    background-color: rgb(244,242,153);
-    color: rgb(11,11,11);
-    padding: 4px;
-    border-radius: 5px;
-}
-ul{
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .todo-input input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .todo-input button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todo-input button:hover {
+    background: #218838;
+  }
+  
+  #task-list {
     list-style: none;
-    padding: 15px;
-}
-li{
+  }
+  
+  #task-list li {
     display: flex;
     justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 8px;
-    margin-bottom: 7px;
-}
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #task-list li.completed {
+    text-decoration: line-through;
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  #task-list button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #task-list button:hover {
+    background: #c82333;
+  }
+  
